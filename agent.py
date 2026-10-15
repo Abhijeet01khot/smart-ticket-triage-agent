@@ -93,7 +93,7 @@ def _call_gemini_triage(ticket_text: str, metadata: Dict[str, Any]) -> Dict[str,
     """
     genai.configure(api_key=GEMINI_API_KEY)
 
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-3.8-flash")
 
     prompt = f"""
 You are a support-ticket triage agent.
@@ -174,7 +174,7 @@ def run_triage_agent(ticket_text: str, metadata: Dict[str, Any] | None = None) -
             model_used = "fallback_rule_based"
         else:
             triage = _call_gemini_triage(ticket_text, metadata)
-            model_used = "gemini-1.5-flash"
+            model_used = "gemini-3.8-flash"
 
     except Exception as error:
         triage = _fallback_rule_based_triage(ticket_text, metadata)
