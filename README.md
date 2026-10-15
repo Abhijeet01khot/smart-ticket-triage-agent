@@ -1,6 +1,6 @@
 # Smart Ticket Triage Agent
 
-AI/ML Engineer Intern Take-Home Assignment for Potens Internship Hiring 2026.
+AI/ML Engineer Project.
 
 This project implements an agentic support-ticket triage system. It takes a free-text complaint, request, or support ticket and returns a structured triage decision with visible reasoning and real callable tools.
 
